@@ -1,192 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Manoj's Portfolio</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj M — Portfolio Hub</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#059669;--accent-soft:#ecfdf5;--accent-strong:#047857;--radius:14px;--maxw:1000px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:0 20px 24px}
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet">
+    header{display:flex;align-items:center;justify-content:space-between;background:var(--card);padding:10px 14px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,.05);margin-bottom:20px;position:sticky;top:10px;z-index:10}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar-circle{width:40px;height:40px;border-radius:999px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .brand-text h1{margin:0;font-size:18px}
+    .brand-text small{color:var(--muted);font-size:12px}
+    nav a{margin-left:10px;color:var(--muted);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:999px;transition:.2s}
+    nav a:hover{background:var(--accent-soft);color:var(--accent-strong)}
+    @media(max-width:720px){nav{display:none}}
 
-       <link rel="stylesheet" href="style.css">
-    
-  </head>
+    .hero{display:grid;grid-template-columns:2fr 1.4fr;gap:24px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .hero-title{font-size:30px;font-weight:700;margin:0 0 8px}
+    .hero-sub{color:var(--muted);font-size:14px}
+    .hero-highlight{display:inline-block;background:var(--accent-soft);color:#065f46;padding:6px 10px;border-radius:999px;font-size:13px;margin-bottom:10px}
+    .hero-buttons{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+    .btn{padding:9px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;text-decoration:none;color:#0f172a;font-size:13px;font-weight:600;transition:.2s}
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .btn:hover{transform:translateY(-1px)}
 
-  <body>
-    <div class="container">
-      <!-- Header -->
-      <header>
-        <div class="brand">
-          <div class="logo">M</div>
-          <div>
-            <div style="font-weight: 700">Manoj M</div>
-            <div class="muted">Developer • Designer</div>
-          </div>
-        </div>
+    .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(10,10,10,.05);transition:.2s}
+    .card:hover{transform:translateY(-2px)}
+    section{margin-top:36px;scroll-margin-top:110px}
+    h3{margin:0 0 6px}
+    .muted{color:var(--muted);font-size:13px}
 
-        <nav>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact" class="cta">Contact</a>
-        </nav>
-      </header>
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}}
 
-      <!-- Profile Picture -->
-      <section class="profile-pic" style="text-align: center; margin: 20px 0">
-        <img src="my selfee.jpg" alt="Profile Picture" />
-      </section>
+    .band{background:#eefcf6;padding:24px;border-radius:18px}
+    .icon{font-size:18px;margin-right:6px}
+    .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-strong);padding:4px 10px;border-radius:999px;font-size:12px;margin-right:6px}
 
-      <!-- Hero -->
-      <section class="hero">
-        <div class="left">
-          <h1>
-            Hi — I'm Manoj. I build web applications and aim to shift into IT
-            development roles.
-          </h1>
-          <p class="lead">
-            Analytical Process Executive at Infosys with experience
-            investigating financial transactions under Regulation E. Skilled in
-            Python, Java, HTML, CSS, JavaScript, MySQL, with a strong foundation
-            in machine learning and data analysis. Strong problem-solving
-            abilities and cross-functional collaboration skills. Seeking a
-            transition into software development or data-focused roles.
-          </p>
-          <div class="actions">
-            <a class="btn" href="#projects">See my work</a>
-            <a class="btn" href="#contact">Get in touch</a>
-          </div>
-        </div>
-
-        <!-- Quick Card -->
-        <div style="min-width: 260px; max-width: 360px" class="card">
-          <div style="font-weight: 700; font-size: 18px">Quick info</div>
-          <div class="muted" style="margin-top: 8px">
-            Current Location: Mysore, India
-          </div>
-        </br>
-          <div class="muted">
-            Current Role: Infosys BPM | Process Executive | Fraud Investigator
-          </div>
-        </br>
-          <div class="muted">Goal: Transition to IT (Software engineering/ Web development)</div>
-        </div>
-      </br>
-      </section>
-
-      <!-- Main Grid -->
-      <div class="grid">
-        <!-- Sidebar -->
-        <aside class="card about">
-         
-          <h4 id="skills">Skills</h4>
-          <div class="tags">
-            <div class="tag">Java</div>
-            <div class="tag">Python</div>
-            <div class="tag">HTML</div>
-            <div class="tag">CSS</div>
-            <div class="tag">JavaScript</div>
-            <div class="tag">Agile</div>
-            <div class="tag">Firebase</div>
-          </div>
-
-          <hr />
-
-          <h4>Certifications</h4>
-          <p class="muted">
-            You can add your Agile, Python, Java, or any Coursera/Udemy
-            certifications here.
-          </p>
-
-          <h4>Education</h4>
-          <div class="muted" style="margin-top: 8px">
-            <strong>BCA</strong> — SBRR Mahajana’s First Grade College<br />
-            <strong>MCA</strong> — The National Institute of Engineering (NIE),
-            Mysore
-          </div>
-
-          <hr />
-
-          <h4>Career Transition & Goal</h4>
-          <p class="muted">
-            “I joined Infosys BPM as a Fraud Investigator when opportunities aligned that way, but my true passion has always been software development—coding, building applications, and creating real solutions through technology. I am now focused on transitioning into software engineering and web development roles, where I can apply my technical skills and continue growing in the IT domain.”          </p>
-
-          <hr />
-
-         
-
-          
-        </aside>
-
-        <!-- Projects -->
-        <main class="projects card">
-          <h3 id="projects">Academic Projects</h3>
-
-          <div class="project-list">
-            <article class="project">
-              <h4>MCA Project — Social Bot Detection</h4>
-              <div class="muted">
-                A machine learning model to detect fake posts/content on social
-                media platforms.
-              </div>
-              <div class="tags">
-                <span class="tag">ML</span>
-                <span class="tag">Python</span>
-              </div>
-            </article>
-
-            <article class="project">
-              <h4>BCA Project — Employee Tracking System</h4>
-              <div class="muted">
-                Built a system for employee attendance and tracking with a
-                role-based interface.
-              </div>
-              <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">DBMS</span>
-              </div>
-            </article>
-          </div>
-
-          <hr />
-
-          <h3>Personal Projects</h3>
-
-          <div class="project-list">
-            <article class="project">
-              <h4>Loan Management Web App (Vridhi)</h4>
-              <div class="muted">
-                Firebase-based loan application and approval system with admin
-                and manager roles.
-              </div>
-              <div class="tags">
-                <span class="tag">Firebase</span>
-                <span class="tag">JavaScript</span>
-              </div>
-            </article>
-          </div>
-
-          <hr />
-
-          <h3 id="contact">Contact</h3>
-
-          <form
-            class="contact"
-            onsubmit="event.preventDefault(); alert('This is a placeholder. Connect this form to your backend or email service.');"
-          >
-            <input type="text" placeholder="Your name" required />
-            <input type="email" placeholder="Your email" required />
-            <textarea rows="4" placeholder="Your message"></textarea>
-            <button class="btn" type="submit">Send Message</button>
-          </form>
-        </main>
+    footer{text-align:center;color:var(--muted);font-size:12px;margin-top:36px}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="avatar-circle">MM</div>
+      <div class="brand-text">
+        <h1>Manoj M</h1>
+        <small>Process Executive | Fraud Investigation | Data & Web Development</small>
       </div>
-
-      <footer>© <span id="year"></span> Manoj M — Built with Confidence 😎 </footer>
     </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#current">Current role</a>
+      <a href="#profiles">Beyond my role</a>
+      <a href="#paths">Career paths</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <div class="hero-highlight">Portfolio Snapshot</div>
+        <h1 class="hero-title">Hi, I'm Manoj.</h1>
+        <p class="hero-sub">I work across <strong>data, software, and design</strong> through personal projects and continuous learning, while building on real-world experience in <strong>banking operations and regulatory compliance</strong>.</p>
+        <p class="hero-sub" style="margin-top:8px"><strong>Infosys BPM · Truist · Regulation E</strong><br>Process Executive — Fraud Investigation & Claims Analysis<br><span class="muted">April 2025 – Present · Banking & Financial Services</span></p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#current">My current role</a>
+          <a class="btn" href="#paths">My career paths</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <img src="" alt="Manoj" style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid #ecfdf5;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-bottom:12px" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"180\"><rect width=\"100%\" height=\"100%\" fill=\"%23ecfdf5\"/><text x=\"50%\" y=\"55%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"%23059669\" font-size=\"32\" font-family=\"Arial\">MM</text></svg>'" />
+        <strong>Manoj M</strong>
+        <p class="muted">Process Executive · Fraud Investigation</p>
+      </div>
+    </section>
+
+    <section id="current">
+      <h3>Current role</h3>
+      <div class="card">
+        <strong>Process Executive — Fraud Investigation & Claims Analysis (RegE)</strong>
+        <p class="muted" style="margin-top:6px">Infosys BPM · Truist · Banking & Financial Services · April 2025 – Present</p>
+        <p class="muted" style="margin-top:10px">I handle Regulation E dispute investigations, following structured, rule-based workflows to determine whether customer claims should be approved or denied based on compliance guidelines and evidence.</p>
+        <ul class="muted">
+          <li>Investigate electronic fund transfer disputes under RegE guidelines.</li>
+          <li>Work across CNP (Card Not Present), CP (Card Present), and CCP entry modes.</li>
+          <li>Navigate flow-based investigation steps leading to claim approval or denial.</li>
+          <li>Maintain accuracy, timelines, and clear documentation for compliance and audit needs.</li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="tag">Regulation E</span>
+          <span class="tag">Banking operations</span>
+          <span class="tag">Claims & disputes</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <h3>Beyond my role</h3>
+      <p class="muted">Where I'm intentionally heading next.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card"><strong><span class="icon">📊</span>Data mindset</strong><p class="muted">Applying structured thinking from banking operations to data, dashboards, and insights.</p></div>
+        <div class="card"><strong><span class="icon">💻</span>Software thinking</strong><p class="muted">Exploring how workflows can become tools, applications, and systems.</p></div>
+        <div class="card"><strong><span class="icon">🎨</span>Design awareness</strong><p class="muted">Understanding clarity, usability, and interfaces that support decisions.</p></div>
+        <div class="card"><strong><span class="icon">🚀</span>FinTech direction</strong><p class="muted">Blending compliance knowledge with technology-driven problem solving.</p></div>
+      </div>
+    </section>
+
+    <p class="muted" style="text-align:center;margin:32px 0">From domain expertise → focused career paths</p>
+
+    <section id="paths" class="band">
+      <h3>Explore my profiles</h3>
+      <p class="muted">Choose how you want to view my work.</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card" style="border:2px solid var(--accent)"><strong>⭐ Me as a Data Analyst</strong><p class="muted">Analytics, SQL, dashboards, and data storytelling.</p><a class="btn primary" href="data-analyst.html">Open Data Analyst portfolio</a></div>
+        <div class="card"><strong>💻 Me as a Software Developer</strong><p class="muted">Web projects, applications, and engineering experiments.</p><a class="btn" href="https://rushgod27.github.io/Manoj-portfolio" target="_blank">Open Developer portfolio</a></div>
+        <div class="card"><strong>🕵️ Me as a Fraud Investigator</strong><p class="muted">RegE disputes, compliance workflows, and investigations.</p><a class="btn" href="fraud-investigator.html">Open Fraud portfolio</a></div>
+        <div class="card"><strong>🎨 Me as a UI/UX Designer</strong><p class="muted">Layouts, flows, and user-focused design concepts.</p><a class="btn" href="ui-ux.html">Open UI/UX portfolio</a></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p class="muted">Let's connect</p>
+      <div class="card">
+        <p class="muted">📧 manoj270399@gmail.com</p>
+        <p class="muted">📞 +91 90359 94250</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Manoj M — Portfolio Hub</footer>
+</div>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href').substring(1);
+      var target = document.getElementById(id);
+      if(!target) return;
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+</script>
+</body>
 </html>
