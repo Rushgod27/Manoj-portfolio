@@ -186,26 +186,74 @@ footer{
   transform:translateY(0)
 }
 
-/* ===== MOBILE TEXT SCALING FIX ===== */
+/* ===== MOBILE POLISH (REAL FIX) ===== */
 @media (max-width: 768px) {
+
+  /* Base typography */
   html {
-    font-size: 13px;
+    font-size: 15px;
+  }
+
+  body {
+    line-height: 1.45;
+  }
+
+  /* Hero */
+  .hero {
+    margin-top: 20px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 1.2;
   }
 
   .focus {
     font-size: 15px;
   }
 
+  .badge {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
   .sub {
     font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Sections */
+  section {
+    margin-top: 36px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 14px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  /* Grid */
+  .grid {
+    gap: 12px;
+  }
+
+  /* Header & nav */
+  header {
+    padding: 10px 12px;
   }
 
   nav a {
     font-size: 13px;
+    margin-left: 8px;
   }
 }
+
 
