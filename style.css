@@ -189,7 +189,7 @@ footer{
 /* ===== MOBILE TEXT SCALING FIX ===== */
 @media (max-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   h1 {
