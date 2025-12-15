@@ -59,7 +59,7 @@ body {
 
 header {
   position: sticky;
-  top: 16px;
+  top: 1px;
   z-index: 40;
 
   display: flex;
