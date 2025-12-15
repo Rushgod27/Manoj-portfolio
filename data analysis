@@ -1,1 +1,192 @@
-a
+ html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manoj's Portfolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
+
+       <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <div class="brand">
+          <div class="logo">M</div>
+          <div>
+            <div style="font-weight: 700">Manoj M</div>
+            <div class="muted">Developer • Designer</div>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact" class="cta">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Profile Picture -->
+      <section class="profile-pic" style="text-align: center; margin: 20px 0">
+        <img src="my selfee.jpg" alt="Profile Picture" />
+      </section>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="left">
+          <h1>
+            Hi — I'm Manoj. I build web applications and aim to shift into IT
+            development roles.
+          </h1>
+          <p class="lead">
+            Analytical Process Executive at Infosys with experience
+            investigating financial transactions under Regulation E. Skilled in
+            Python, Java, HTML, CSS, JavaScript, MySQL, with a strong foundation
+            in machine learning and data analysis. Strong problem-solving
+            abilities and cross-functional collaboration skills. Seeking a
+            transition into software development or data-focused roles.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#projects">See my work</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Quick Card -->
+        <div style="min-width: 260px; max-width: 360px" class="card">
+          <div style="font-weight: 700; font-size: 18px">Quick info</div>
+          <div class="muted" style="margin-top: 8px">
+            Current Location: Mysore, India
+          </div>
+        </br>
+          <div class="muted">
+            Current Role: Infosys BPM | Process Executive | Fraud Investigator
+          </div>
+        </br>
+          <div class="muted">Goal: Transition to IT (Software engineering/ Web development)</div>
+        </div>
+      </br>
+      </section>
+
+      <!-- Main Grid -->
+      <div class="grid">
+        <!-- Sidebar -->
+        <aside class="card about">
+         
+          <h4 id="skills">Skills</h4>
+          <div class="tags">
+            <div class="tag">Java</div>
+            <div class="tag">Python</div>
+            <div class="tag">HTML</div>
+            <div class="tag">CSS</div>
+            <div class="tag">JavaScript</div>
+            <div class="tag">Agile</div>
+            <div class="tag">Firebase</div>
+          </div>
+
+          <hr />
+
+          <h4>Certifications</h4>
+          <p class="muted">
+            You can add your Agile, Python, Java, or any Coursera/Udemy
+            certifications here.
+          </p>
+
+          <h4>Education</h4>
+          <div class="muted" style="margin-top: 8px">
+            <strong>BCA</strong> — SBRR Mahajana’s First Grade College<br />
+            <strong>MCA</strong> — The National Institute of Engineering (NIE),
+            Mysore
+          </div>
+
+          <hr />
+
+          <h4>Career Transition & Goal</h4>
+          <p class="muted">
+            “I joined Infosys BPM as a Fraud Investigator when opportunities aligned that way, but my true passion has always been software development—coding, building applications, and creating real solutions through technology. I am now focused on transitioning into software engineering and web development roles, where I can apply my technical skills and continue growing in the IT domain.”          </p>
+
+          <hr />
+
+         
+
+          
+        </aside>
+
+        <!-- Projects -->
+        <main class="projects card">
+          <h3 id="projects">Academic Projects</h3>
+
+          <div class="project-list">
+            <article class="project">
+              <h4>MCA Project — Social Bot Detection</h4>
+              <div class="muted">
+                A machine learning model to detect fake posts/content on social
+                media platforms.
+              </div>
+              <div class="tags">
+                <span class="tag">ML</span>
+                <span class="tag">Python</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <h4>BCA Project — Employee Tracking System</h4>
+              <div class="muted">
+                Built a system for employee attendance and tracking with a
+                role-based interface.
+              </div>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">DBMS</span>
+              </div>
+            </article>
+          </div>
+
+          <hr />
+
+          <h3>Personal Projects</h3>
+
+          <div class="project-list">
+            <article class="project">
+              <h4>Loan Management Web App (Vridhi)</h4>
+              <div class="muted">
+                Firebase-based loan application and approval system with admin
+                and manager roles.
+              </div>
+              <div class="tags">
+                <span class="tag">Firebase</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </article>
+          </div>
+
+          <hr />
+
+          <h3 id="contact">Contact</h3>
+
+          <form
+            class="contact"
+            onsubmit="event.preventDefault(); alert('This is a placeholder. Connect this form to your backend or email service.');"
+          >
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+            <textarea rows="4" placeholder="Your message"></textarea>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </main>
+      </div>
+
+      <footer>© <span id="year"></span> Manoj M — Built with Confidence 😎 </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
