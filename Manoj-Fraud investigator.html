@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj M — Fraud Investigation & Banking Operations</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html">← Back to Hub</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#role">Current Role</a>
+      <a href="#skills">Core Skills</a>
+      <a href="#process">Process Expertise</a>
+      <a href="#contact">Contact</a>
+      <a href="Manoj_M_Fraud_Investigator_Resume.pdf" download class="resume-link">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="badge">Banking · Fraud · Compliance</span>
+      <h1>Manoj M</h1>
+
+      <div style="height:28px;position:relative;overflow:hidden;margin:6px 0 10px">
+        <div class="focus show">Fraud Investigation & Claims Analysis</div>
+        <div class="focus">Regulation E (RegE)</div>
+        <div class="focus">US Banking Operations</div>
+        <div class="focus">Evidence-Based Decision Making</div>
+      </div>
+
+      <p class="sub" style="font-size:16px;margin-top:6px">
+        Banking operations professional handling Regulation E dispute investigations
+        for a US bank client, with a strong focus on accuracy, compliance, and structured
+        decision-making.
+      </p>
+
+      <p class="sub">
+        This profile highlights my hands-on experience in fraud investigation workflows,
+        regulatory compliance, and claims resolution within the US banking ecosystem.
+      </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About this profile</h2>
+      <p class="sub">
+        I work in a highly regulated banking environment where every decision must be
+        supported by evidence, timelines, and documented reasoning. My role requires
+        consistent adherence to Regulation E guidelines while handling customer-raised
+        disputes related to electronic fund transfers.
+      </p>
+    </section>
+
+    <!-- CURRENT ROLE -->
+    <section id="role">
+      <h2>Current role</h2>
+      <div class="card">
+        <strong>Process Executive — Fraud Investigation & Claims Analysis (RegE)</strong>
+        <p class="sub" style="margin-top:6px">
+          Infosys BPM · Truist · Banking & Financial Services<br>
+          <span class="muted">April 2025 – Present</span>
+        </p>
+
+        <p class="sub" style="margin-top:10px">
+          Handling Regulation E dispute investigations by following structured,
+          rule-based workflows to determine whether customer claims should be approved
+          or denied based on compliance guidelines and evidence.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Core skills</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Fraud investigation</strong>
+          <p>Analyzing transaction disputes and identifying valid vs invalid claims.</p>
+          <span class="tag">Dispute analysis</span>
+          <span class="tag">Evidence review</span>
+        </div>
+
+        <div class="card">
+          <strong>Regulatory compliance</strong>
+          <p>Strict adherence to Regulation E timelines, rules, and documentation.</p>
+          <span class="tag">RegE</span>
+          <span class="tag">Compliance</span>
+        </div>
+
+        <div class="card">
+          <strong>Decision documentation</strong>
+          <p>Clear, structured reasoning to support audit and quality reviews.</p>
+          <span class="tag">Audit-ready</span>
+          <span class="tag">Accuracy</span>
+        </div>
+
+        <div class="card">
+          <strong>Banking operations</strong>
+          <p>Understanding end-to-end dispute handling within US banking systems.</p>
+          <span class="tag">US banking</span>
+          <span class="tag">Operations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <h2>Process expertise</h2>
+      <p class="sub">
+        I work across multiple RegE entry modes, each with its own investigation flow
+        and decision checkpoints.
+      </p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <strong>Card Not Present (CNP)</strong>
+          <p>Investigating online and remote transactions using evidence, timelines,
+             and customer statements.</p>
+        </div>
+
+        <div class="card">
+          <strong>Card Present (CP)</strong>
+          <p>Analyzing disputes where physical card usage is involved, including merchant
+             and transaction validation.</p>
+        </div>
+
+        <div class="card">
+          <strong>CCP workflows</strong>
+          <p>Handling internally categorized cases aligned with card transaction
+             investigation logic.</p>
+        </div>
+
+        <div class="card">
+          <strong>End-to-end claim resolution</strong>
+          <p>Moving claims from intake through investigation to final approval or denial.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>📧 manoj270399@gmail.com</p>
+        <p>🔗 LinkedIn:
+          <a href="https://linkedin.com/in/manojgaanadarshi" target="_blank">
+            linkedin.com/in/manojgaanadarshi
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2025 Manoj M — Fraud Investigation Profile</footer>
+</div>
+
+<script>
+  /* Rotating focus logic */
+  (function(){
+    var items = document.querySelectorAll('.focus');
+    var i = 0;
+    if(!items.length) return;
+    items[0].classList.add('show');
+    setInterval(function(){
+      items[i].classList.remove('show');
+      i = (i + 1) % items.length;
+      items[i].classList.add('show');
+    }, 2200);
+  })();
+</script>
+
+</body>
+</html>
