@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj M — Software Developer Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html">← Back to Hub</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Practice</a>
+      <a href="#contact">Contact</a>
+      <a href="Manoj_M_Software_Developer_Resume.pdf" download class="resume-link">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="badge">Software · Web · Development</span>
+      <h1>Manoj M</h1>
+
+      <div style="height:28px;position:relative;overflow:hidden;margin:6px 0 10px">
+        <div class="focus show">Building Web Applications</div>
+        <div class="focus">HTML · CSS · JavaScript</div>
+        <div class="focus">Frontend Logic & UI</div>
+        <div class="focus">Learning Full-Stack Concepts</div>
+      </div>
+
+      <p class="sub" style="font-size:16px;margin-top:6px">
+        Software-focused learner building practical web applications using clean
+        HTML, CSS, and JavaScript.
+      </p>
+      <p class="sub">
+        This page highlights my development journey — focused on fundamentals,
+        real-world workflows, and turning ideas into usable interfaces.
+      </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About this profile</h2>
+      <p class="sub">
+        My interest in software development comes from building dashboards,
+        admin panels, and workflow-driven systems. I enjoy breaking down problems
+        into components and implementing simple, reliable solutions.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills & tools</h2>
+      <div class="grid">
+        <div class="card"><strong>Frontend</strong><p>HTML, CSS, responsive layouts, basic UI interactions.</p></div>
+        <div class="card"><strong>JavaScript</strong><p>DOM manipulation, events, and client-side logic.</p></div>
+        <div class="card"><strong>Web concepts</strong><p>Forms, dashboards, role-based flows.</p></div>
+        <div class="card"><strong>Tooling</strong><p>GitHub Pages, browser debugging, version control basics.</p></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects & practice</h2>
+      <p class="sub">Learning-focused development work and hands-on practice.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <strong>Portfolio & dashboards</strong>
+          <p>Building portfolio pages, dashboards, and role-based views using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card">
+          <strong>Workflow-driven pages</strong>
+          <p>Experimenting with forms, approval flows, and simple admin-style interfaces.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>📧 manoj270399@gmail.com</p>
+        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/manojgaanadarshi" target="_blank">linkedin.com/in/manojgaanadarshi</a></p>
+        <p>🔗 GitHub: <a href="https://github.com/rushgod27" target="_blank">github.com/rushgod27</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2025 Manoj M — Software Developer Portfolio</footer>
+</div>
+
+<script>
+  /* Rotating focus logic */
+  (function(){
+    var items = document.querySelectorAll('.focus');
+    var i = 0;
+    if(!items.length) return;
+    items[0].classList.add('show');
+    setInterval(function(){
+      items[i].classList.remove('show');
+      i = (i + 1) % items.length;
+      items[i].classList.add('show');
+    }, 2200);
+  })();
+</script>
+
+</body>
+</html>
