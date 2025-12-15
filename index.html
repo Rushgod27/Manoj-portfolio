@@ -4,16 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Manoj M — Portfolio Hub</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <div class="wrap">
+
+  <!-- HEADER -->
   <header>
-    <div class="brand">
-      <div class="brand-text">
-        <h1>Manoj M</h1>
-     </div>
+    <div class="brand-text">
+      <h1>Manoj M</h1>
     </div>
+
     <nav>
       <a href="#home">Home</a>
       <a href="#current">Current role</a>
@@ -24,32 +26,47 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section id="home" class="hero">
       <div>
-        <div class="hero-highlight">Portfolio Snapshot</div>
-        <h1 class="hero-title">Hi, I'm Manoj.</h1>
-        <p class="hero-sub">I work across <strong>data, software, and design</strong> through personal projects and continuous learning, while building on real-world experience in <strong>banking operations and regulatory compliance</strong>.</p>
+        <span class="badge">Portfolio Snapshot</span>
+        <h1>Hi, I’m Manoj.</h1>
+        <p class="sub">
+          I work across <strong>data, software, and design</strong> through personal projects
+          and continuous learning, while building on real-world experience in
+          <strong>banking operations and regulatory compliance</strong>.
+        </p>
       </div>
+
       <div style="display:flex;flex-direction:column;align-items:center;justify-content:center">
-        <img src="profile.jpg" alt="Manoj" style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid #ecfdf5;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-bottom:12px" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"180\" height=\"180\"><rect width=\"100%\" height=\"100%\" fill=\"%23ecfdf5\"/><text x=\"50%\" y=\"55%\" dominant-baseline=\"middle\" text-anchor=\"middle\" fill=\"%23059669\" font-size=\"32\" font-family=\"Arial\"></text></svg>
+        <img
+          src="profile.jpg"
+          alt="Manoj"
+          style="width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid #ecfdf5;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-bottom:12px"
+        >
         <strong>Manoj M</strong>
         <p class="muted">Process Executive · Fraud Investigation</p>
       </div>
     </section>
 
+    <!-- CURRENT ROLE -->
     <section id="current">
       <h3>Current role</h3>
       <div class="card">
         <strong>Process Executive — Fraud Investigation & Claims Analysis (RegE)</strong>
-        <p class="muted" style="margin-top:6px">Infosys BPM · Truist · Banking & Financial Services · April 2025 – Present</p>
-        <p class="muted" style="margin-top:10px">I handle Regulation E dispute investigations, following structured, rule-based workflows to determine whether customer claims should be approved or denied based on compliance guidelines and evidence.</p>
+        <p class="muted">Infosys BPM · Truist · Banking & Financial Services · April 2025 – Present</p>
+        <p class="muted">
+          Handling Regulation E dispute investigations using structured, rule-based workflows
+          to approve or deny customer claims.
+        </p>
         <ul class="muted">
-          <li>Investigate electronic fund transfer disputes under RegE guidelines.</li>
-          <li>Work across CNP (Card Not Present), CP (Card Present), and CCP entry modes.</li>
-          <li>Navigate flow-based investigation steps leading to claim approval or denial.</li>
-          <li>Maintain accuracy, timelines, and clear documentation for compliance and audit needs.</li>
+          <li>Investigate electronic fund transfer disputes under RegE</li>
+          <li>Work across CNP, CP, and CCP entry modes</li>
+          <li>Follow flow-based investigation steps</li>
+          <li>Maintain audit-ready documentation</li>
         </ul>
-        <div style="margin-top:8px">
+        <div>
           <span class="tag">Regulation E</span>
           <span class="tag">Banking operations</span>
           <span class="tag">Claims & disputes</span>
@@ -57,52 +74,58 @@
       </div>
     </section>
 
+    <!-- BEYOND ROLE -->
     <section id="profiles">
       <h3>Beyond my role</h3>
-      <p class="muted">Where I'm intentionally heading next.</p>
-      <div class="grid" style="margin-top:12px">
-        <div class="card"><strong><span class="icon">📊</span>Data mindset</strong><p class="muted">Applying structured thinking from banking operations to data, dashboards, and insights.</p></div>
-        <div class="card"><strong><span class="icon">💻</span>Software thinking</strong><p class="muted">Exploring how workflows can become tools, applications, and systems.</p></div>
-        <div class="card"><strong><span class="icon">🎨</span>Design awareness</strong><p class="muted">Understanding clarity, usability, and interfaces that support decisions.</p></div>
-        <div class="card"><strong><span class="icon">🚀</span>FinTech direction</strong><p class="muted">Blending compliance knowledge with technology-driven problem solving.</p></div>
+      <p class="muted">Where I’m intentionally heading next.</p>
+
+      <div class="grid">
+        <div class="card"><strong>📊 Data mindset</strong><p class="muted">Turning structured processes into insights.</p></div>
+        <div class="card"><strong>💻 Software thinking</strong><p class="muted">Building workflow-driven tools.</p></div>
+        <div class="card"><strong>🎨 Design awareness</strong><p class="muted">Clarity, usability, and interfaces.</p></div>
+        <div class="card"><strong>🚀 FinTech direction</strong><p class="muted">Compliance + technology.</p></div>
       </div>
     </section>
 
-    <p class="muted" style="text-align:center;margin:32px 0">From domain expertise → focused career paths</p>
-
-    <section id="paths" class="band">
+    <!-- PATHS -->
+    <section id="paths">
       <h3>Explore my profiles</h3>
-      <p class="muted">Choose how you want to view my work.</p>
-      <div class="grid" style="margin-top:12px">
-        <div class="card" <strong>⭐ Me as a Data Analyst</strong><p class="muted">Analytics, SQL, dashboards, and data storytelling.</p><a class="btn" href="Manoj-data analyst.html" class="btn primary">Me as a Data Analyst</a></div>
-        <div class="card"><strong>💻 Me as a Software Developer</strong><p class="muted">Web projects, applications, and engineering experiments.</p><a class="btn" href="Manoj-Software developer.html">Me as a Developer portfolio</a></div>
-        <div class="card"><strong>🕵️ Me as a Fraud Investigator</strong><p class="muted">RegE disputes, compliance workflows, and investigations.</p><a class="btn" href="Manoj-Fraud investigator.html">me as a Fraud Investigator</a></div>
+
+      <div class="grid">
+        <div class="card">
+          <strong>⭐ Me as a Data Analyst</strong>
+          <p class="muted">SQL, Power BI, dashboards.</p>
+          <a class="btn" href="data-analyst.html">Open profile</a>
+        </div>
+
+        <div class="card">
+          <strong>💻 Me as a Software Developer</strong>
+          <p class="muted">Web & frontend projects.</p>
+          <a class="btn" href="software-developer.html">Open profile</a>
+        </div>
+
+        <div class="card">
+          <strong>🕵️ Me as a Fraud Investigator</strong>
+          <p class="muted">RegE & banking workflows.</p>
+          <a class="btn" href="fraud-investigator.html">Open profile</a>
+        </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <h3>Contact</h3>
-      <p class="muted">Let's connect</p>
       <div class="card">
         <p class="muted">📧 manoj270399@gmail.com</p>
         <p class="muted">📞 +91 90359 94250</p>
       </div>
     </section>
+
   </main>
 
   <footer>© 2025 Manoj M — Portfolio Hub</footer>
 </div>
+<script src="app.js"></script>
 
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(function(link){
-    link.addEventListener('click', function(e){
-      var id = this.getAttribute('href').substring(1);
-      var target = document.getElementById(id);
-      if(!target) return;
-      e.preventDefault();
-      target.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  });
-</script>
 </body>
 </html>
