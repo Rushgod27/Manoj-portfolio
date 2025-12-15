@@ -256,4 +256,43 @@ footer{
   }
 }
 
+/* ===== HAMBURGER MENU ===== */
+.menu-btn {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav.nav {
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 20;
+  }
+
+  nav.nav a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  nav.nav.show {
+    display: flex;
+  }
+}
+
 
