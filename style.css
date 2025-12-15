@@ -185,3 +185,27 @@ footer{
   opacity:1;
   transform:translateY(0)
 }
+
+/* ===== MOBILE TEXT SCALING FIX ===== */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .focus {
+    font-size: 15px;
+  }
+
+  .sub {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+}
+
