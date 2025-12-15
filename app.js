@@ -1,49 +1,59 @@
-/* ===========================
-   SHARED PORTFOLIO SCRIPT
-   =========================== */
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* ---------- SMOOTH SCROLL ---------- */
+  /* SMOOTH SCROLL */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function (e) {
-      const id = this.getAttribute("href").substring(1);
+    link.addEventListener("click", e => {
+      const id = link.getAttribute("href").slice(1);
       const target = document.getElementById(id);
       if (!target) return;
-
       e.preventDefault();
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+      target.scrollIntoView({ behavior:"smooth", block:"start" });
     });
   });
 
-  /* ---------- ACTIVE NAV HIGHLIGHT ---------- */
+  /* ACTIVE NAV */
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll("nav a[href^='#']");
+  const navLinks = document.querySelectorAll("nav a");
 
-  function activateNav() {
-    let scrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    let y = window.scrollY;
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 140;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute("id");
-
-      if (
-        scrollY >= sectionTop &&
-        scrollY < sectionTop + sectionHeight
-      ) {
-        navLinks.forEach(link => link.classList.remove("active"));
-        const activeLink = document.querySelector(
-          `nav a[href="#${sectionId}"]`
-        );
-        if (activeLink) activeLink.classList.add("active");
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 140;
+      const height = sec.offsetHeight;
+      if (y >= top && y < top + height) {
+        navLinks.forEach(a => a.classList.remove("active"));
+        const active = document.querySelector(`nav a[href="#${sec.id}"]`);
+        if (active) active.classList.add("active");
       }
     });
-  }
+  });
 
-  window.addEventListener("scroll", activateNav);
-  activateNav(); // run once on load
+  /* HEADER SHRINK */
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("shrink", window.scrollY > 80);
+  });
+
+  /* SECTION FADE-IN */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll("section").forEach(sec => observer.observe(sec));
+
+  /* DARK MODE */
+  const toggle = document.querySelector(".theme-toggle");
+  if (toggle) {
+    if (localStorage.getItem("theme") === "dark")
+      document.body.classList.add("dark");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme",
+        document.body.classList.contains("dark") ? "dark" : "light");
+    });
+  }
 });
