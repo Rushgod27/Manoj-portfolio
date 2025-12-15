@@ -4,30 +4,11 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ---------- HAMBURGER MENU ---------- */
-  const menuBtn = document.querySelector(".menu-btn");
-  const nav = document.querySelector("nav");
-
-  if (menuBtn && nav) {
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  }
-
-  /* Close menu when clicking a nav link (mobile UX) */
-  document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-      if (nav.classList.contains("show")) {
-        nav.classList.remove("show");
-      }
-    });
-  });
-
   /* ---------- SMOOTH SCROLL ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
-      const targetId = this.getAttribute("href").substring(1);
-      const target = document.getElementById(targetId);
+      const id = this.getAttribute("href").substring(1);
+      const target = document.getElementById(id);
       if (!target) return;
 
       e.preventDefault();
@@ -43,21 +24,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("nav a[href^='#']");
 
   function activateNav() {
-    let scrollY = window.pageYOffset;
+    let scrollY = window.scrollY;
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 140;
       const sectionHeight = section.offsetHeight;
-      const id = section.getAttribute("id");
+      const sectionId = section.getAttribute("id");
 
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      if (
+        scrollY >= sectionTop &&
+        scrollY < sectionTop + sectionHeight
+      ) {
         navLinks.forEach(link => link.classList.remove("active"));
-        const activeLink = document.querySelector(`nav a[href='#${id}']`);
+        const activeLink = document.querySelector(
+          `nav a[href="#${sectionId}"]`
+        );
         if (activeLink) activeLink.classList.add("active");
       }
     });
   }
 
   window.addEventListener("scroll", activateNav);
-
+  activateNav(); // run once on load
 });
