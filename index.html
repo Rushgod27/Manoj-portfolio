@@ -6,23 +6,42 @@
   <title>Manoj M — Portfolio Hub</title>
 <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('nav.nav');
+
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
+
 <body>
 <div class="wrap">
-  <header>
-    <div class="brand">
-      <div class="brand-text">
-        <h1>Manoj M</h1>
-        <small>Process Executive | Fraud Investigation | Data & Web Development</small>
-      </div>
-    </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#current">Current role</a>
-      <a href="#profiles">Beyond my role</a>
-      <a href="#paths">Career paths</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <a href="index.html">← Back to Hub</a>
+
+  <!-- Right side actions -->
+  <div class="header-actions">
+    <a href="Manoj_M_Data_Analyst_Resume.pdf" download class="resume-link">
+      Resume
+    </a>
+
+    <button class="menu-btn" aria-label="Toggle menu">
+      ☰
+    </button>
+  </div>
+
+  <!-- Navigation (NO resume here) -->
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Practice</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
 
   <main>
     <section id="home" class="hero">
