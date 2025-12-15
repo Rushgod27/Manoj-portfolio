@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manoj M — Data Analyst Portfolio</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#2563eb;--accent-soft:#eff6ff;--radius:14px;--maxw:1000px;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:0 20px 32px}
+
+    header{display:flex;align-items:center;justify-content:space-between;background:var(--card);padding:12px 16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+    header a{text-decoration:none;color:#0f172a;font-weight:600}
+    nav a{margin-left:12px;color:var(--muted);font-size:14px}
+    .resume-link{padding:6px 12px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font-weight:600}
+
+    .hero{margin-top:32px}
+    .badge{display:inline-block;background:var(--accent-soft);color:#1e40af;padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:10px}
+    h1{margin:6px 0 10px;font-size:34px}
+    .sub{color:var(--muted);max-width:700px}
+
+    section{margin-top:48px}
+    h2{margin-bottom:8px}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    @media(max-width:720px){.grid{grid-template-columns:1fr}}
+
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,.05);position:relative}
+    .card strong{display:block;margin:10px 0 6px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* CERT IMAGE + HOVER */
+    .cert-img-wrap{border-radius:10px;overflow:hidden;background:#f1f5f9;cursor:pointer}
+    .cert-img-wrap img{width:100%;display:block;transition:transform .3s ease}
+    .cert-img-wrap:hover img{transform:scale(1.05)}
+
+    /* IN PROGRESS RIBBON */
+    .ribbon{position:absolute;top:14px;right:-6px;background:#f59e0b;color:#fff;font-size:11px;padding:4px 10px;transform:rotate(5deg);border-radius:6px}
+
+    /* LIGHTBOX */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:1000}
+    .lightbox img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+
+    .tag{display:inline-block;background:var(--accent-soft);color:#1e40af;padding:4px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
+
+    footer{text-align:center;color:var(--muted);font-size:12px;margin-top:60px}
+    /* Rotating focus text */
+    .focus{position:absolute;left:0;right:0;opacity:0;transform:translateY(6px);transition:opacity .4s ease,transform .4s ease;font-size:18px;font-weight:600;color:#2563eb}
+    .focus.show{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="index.html">← Back to Hub</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Practice</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+      <a href="Manoj_M_Data_Analyst_Resume.pdf" download class="resume-link">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="badge">Data · Analytics · Learning Journey</span>
+      <h1>Manoj M</h1>
+
+      <!-- Rotating focus areas -->
+      <div style="height:28px;position:relative;overflow:hidden;margin:6px 0 10px">
+        <div class="focus show">Building Data Analysis Foundations</div>
+        <div class="focus">SQL & Data Exploration</div>
+        <div class="focus">Power BI Dashboards</div>
+        <div class="focus">Analytics Thinking</div>
+      </div>
+
+      <p class="sub" style="font-size:16px;margin-top:6px">
+        Data-focused professional building analytical skills through hands-on learning,
+        structured thinking, and domain experience in banking operations.
+      </p>
+      <p class="sub">
+        This page represents my focused journey into data analysis — combining experience from
+        Regulation&nbsp;E workflows with practical work in data cleaning, analysis, and visualization.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About this profile</h2>
+      <p class="sub">
+        My interest in data analysis comes from working in rule-driven environments like Regulation E,
+        where accuracy, evidence, and decision logic matter. I’m building analytical skills to
+        transform raw data into insights that support business decisions.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & tools</h2>
+      <div class="grid">
+        <div class="card"><strong>Data analysis</strong><p>Data cleaning, exploration, and structured reasoning.</p><span class="tag">EDA</span><span class="tag">Problem solving</span></div>
+        <div class="card"><strong>SQL</strong><p>Queries, joins, aggregations, and data validation.</p><span class="tag">SELECT</span><span class="tag">JOINS</span></div>
+        <div class="card"><strong>Excel / Spreadsheets</strong><p>Formulas, pivot tables, and analysis workflows.</p><span class="tag">Pivot tables</span><span class="tag">LOOKUPs</span></div>
+        <div class="card"><strong>Visualization</strong><p>Dashboards and reporting using Power BI.</p><span class="tag">Power BI</span><span class="tag">KPIs</span></div>
+      </div>
+    </section>
+
+    
+
+    <section id="projects">
+      <h2>Projects & practice</h2>
+      <p class="sub">I am currently building my first data projects. This section reflects planned and learning-focused work rather than completed production projects.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <strong>Practice datasets & exercises</strong>
+          <p>Working with sample and open datasets to practice data cleaning, SQL querying, and basic analysis workflows.</p>
+          <span class="tag">Learning</span>
+          <span class="tag">EDA</span>
+          <span class="tag">SQL practice</span>
+        </div>
+        <div class="card">
+          <strong>Planned Power BI dashboards</strong>
+          <p>Preparing to build dashboards focused on KPIs, trends, and summaries as part of structured learning.</p>
+          <span class="tag">Planned</span>
+          <span class="tag">Power BI</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <p class="sub">Formal learning and credentials supporting my data analytics journey.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <span class="ribbon">In progress</span>
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="cert-powerbi.png" alt="Power BI Certification" />
+          </div>
+          <strong>Microsoft Power BI Data Analyst</strong>
+          <p>Data modeling, DAX fundamentals, and interactive dashboard design.</p>
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+          <span class="tag">Data modeling</span>
+          <br><br>
+          <a href="https://learn.microsoft.com/en-us/credentials/" target="_blank">View credential</a>
+        </div>
+
+        <div class="card">
+          <span class="ribbon">In progress</span>
+          <div class="cert-img-wrap" onclick="openLightbox(this)">
+            <img src="cert-sql.png" alt="SQL Certification" />
+          </div>
+          <strong>SQL & Data Foundations</strong>
+          <p>Querying, joins, aggregations, and data handling fundamentals.</p>
+          <span class="tag">SQL</span>
+          <span class="tag">Joins</span>
+          <span class="tag">Aggregations</span>
+          <br><br>
+          <a href="#" target="_blank">View credential</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Certificate preview" />
+    </div>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>📧 manoj270399@gmail.com</p>
+        <p>🔗 LinkedIn: <a href="http://linkedin.com/in/manojgaanadarshi" target="_blank">linkedin.com/in/manojgaanadarshi</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 Manoj M — Data Analyst Portfolio</footer>
+</div>
+<script>
+  function openLightbox(el){
+    var img = el.querySelector('img');
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    if(!img || !lightbox || !lightboxImg) return;
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  }
+  function closeLightbox(){
+    var lightbox = document.getElementById('lightbox');
+    if(lightbox) lightbox.style.display = 'none';
+  }
+</script>
+<script>
+  /* Rotating focus logic */
+  (function(){
+    var items = document.querySelectorAll('.focus');
+    var i = 0;
+    if(!items.length) return;
+    items[0].classList.add('show');
+    setInterval(function(){
+      items[i].classList.remove('show');
+      i = (i + 1) % items.length;
+      items[i].classList.add('show');
+    }, 2200);
+  })();
+</script>
+</body>
+</html>
