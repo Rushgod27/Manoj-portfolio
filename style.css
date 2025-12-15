@@ -295,4 +295,42 @@ footer{
   }
 }
 
+.menu-btn {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    z-index: 20;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a.active {
+    background: var(--accent-soft);
+    border-radius: 999px;
+  }
+}
+
 
